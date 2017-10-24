@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.hibernateMapping.Student" table="STUDENT"
+		catalog="test">
+
+		<id name="studentId" type="java.lang.Integer">
+			<column name="STUDENT_ID" />
+			<generator class="increment" />
+		</id>
+
+		<property name="studentName" type="string">
+			<column name="STUDENT_NAME" length="100" not-null="true"
+				unique="true" />
+		</property>
+
+		<one-to-one name="studentAddress" class="com.hibernateMapping.Address"
+			cascade="save-update"></one-to-one>
+
+	</class>
+</hibernate-mapping>
