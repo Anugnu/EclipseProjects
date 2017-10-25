@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans default-init-method="myInit" default-destroy-method="cleanUp">
+
+	<bean id="triangle" class="springDemo.Triangle" autowire="byName">
+		
+	</bean>
+	<bean id="point1" class="springDemo.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+
+	<bean id="point2" class="springDemo.Point">
+		<property name="x" value="0" />
+		<property name="y" value="10" />
+	</bean>
+
+	<bean id="point3" class="springDemo.Point">
+		<property name="x" value="10" />
+		<property name="y" value="0" />
+	</bean>
+
+</beans>
